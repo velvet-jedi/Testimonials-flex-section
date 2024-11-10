@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Barlow Semi Condensed";
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: aliceblue;
+}
+
+.cards {
+	padding: 2rem;
+	display: flex;
+	margin: 0 auto;
+	gap: 2rem;
+	max-width: 1440px;
+	width: 95%;
+	flex-direction: column;
+}
+.headline > p {
+	font-weight: 600;
+	line-height: 1.4rem;
+	font-size: clamp(1.1rem, 1.2vw, 1.25rem);
+}
+.story > p {
+	opacity: 70%;
+	font-size: clamp(0.875rem, 1vw, 1rem);
+	line-height: 1.6;
+}
+
+.half {
+	opacity: 50%;
+	font-size: 0.8rem;
+}
+.left {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.card {
+	padding: 2rem;
+	box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+		rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	border-radius: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	gap: 1rem;
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.head > img {
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+	object-fit: cover;
+	border: 2px solid wheat;
+}
+.toplefttwo {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.bottomlefttwo {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.card1 {
+	background-image: url("./images/bg-pattern-quotation.svg");
+	background-repeat: no-repeat;
+	background-color: hsl(263, 55%, 52%);
+	color: white;
+}
+
+.card2 {
+	background-color: hsl(217, 19%, 35%);
+	color: white;
+}
+.card4 {
+	background-color: hsl(219, 29%, 14%);
+	color: white;
+}
+.title > p {
+	font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+	.toplefttwo {
+		gap: 2rem;
+		flex-direction: row;
+		display: flex;
+	}
+	.bottomlefttwo {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+	}
+	.cards {
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.left {
+		flex: 1;
+		max-width: calc(100% - 22rem);
+	}
+	.card1 {
+		flex: 2;
+	}
+	.card2 {
+		flex: 1;
+	}
+	.card3 {
+		flex: 1;
+	}
+	.card4 {
+		flex: 2;
+	}
+	.card5 {
+		flex: 0 1 20.3rem;
+	}
+}
